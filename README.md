@@ -34,27 +34,7 @@ Raw CSV Data (NYC Taxi)
 
 ---
 
-## 📁 Project Structure
 
-```
-lakehouse_pipeline/
-├── data/                        # Raw input data (gitignored for large files)
-│   └── sample_taxi.csv          # Sample 1000-row dataset for testing
-├── src/
-│   ├── ingest.py                # PySpark ingestion + schema enforcement
-│   ├── transform.py             # PySpark transformations + feature engineering
-│   ├── hive_register.py         # Hive Metastore schema registration
-│   └── snowflake_loader.py      # Snowflake connector + data loading
-├── sql/
-│   ├── hive_ddl.sql             # Hive table DDL
-│   └── snowflake_analytics.sql  # KPI queries for Snowflake
-├── notebooks/
-│   └── pipeline_demo.ipynb      # End-to-end walkthrough notebook
-├── config/
-│   └── config.yaml              # Connection configs (template)
-├── main.py                      # Orchestrates full pipeline
-├── requirements.txt
-└── README.md
 ```
 
 ---
@@ -124,6 +104,4 @@ python src/snowflake_loader.py # Load to Snowflake
 
 ---
 
-## 📝 Resume Bullet
 
-> Built an end-to-end data lakehouse pipeline ingesting and transforming 10M+ NYC Taxi records using PySpark, registering partitioned Hive Metastore schemas for efficient query pruning, and loading analytics-ready data into Snowflake. Delivered KPI dashboards reducing ad-hoc query time by 40%.
