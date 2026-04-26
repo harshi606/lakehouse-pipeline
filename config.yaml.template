@@ -1,0 +1,22 @@
+# config/config.yaml.template
+# Copy this file to config/config.yaml and fill in your credentials.
+# config/config.yaml is gitignored to protect credentials.
+
+snowflake:
+  account: your_account_identifier       # e.g. xy12345.us-east-1
+  user: your_snowflake_username
+  password: your_snowflake_password
+  database: LAKEHOUSE_DB
+  schema: TAXI
+  warehouse: COMPUTE_WH
+  role: SYSADMIN                          # optional
+
+spark:
+  app_name: NYC_Taxi_Lakehouse
+  warehouse_dir: /tmp/hive_warehouse
+  log_level: WARN
+
+pipeline:
+  raw_input_path: data/sample_taxi.csv
+  staging_path: /tmp/staging/taxi_raw
+  transformed_path: /tmp/transformed/taxi_clean
